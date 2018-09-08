@@ -1,0 +1,6 @@
+教程列表：
+{{ request.path }}
+
+{% for item in List %}
+    {{ item }}{% if not forloop.last %},{% endif %}
+{% endfor %}
