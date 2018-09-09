@@ -10,6 +10,12 @@ def home1(request):
     #List = map(str, range(100))# 一个长度为100的 List
     #return render(request, 'home1.html', {'List': List})
 
+def add(request):
+    a = request.GET['a']
+    b = request.GET['b']
+    a = int(a)
+    b = int(b)
+    return HttpResponse(str(a+b))
 
 def index(request):
     return HttpResponse("欢迎来到天下信用")
